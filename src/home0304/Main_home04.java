@@ -3,6 +3,7 @@ package home0304;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 /**
  * Created by Hamster4n.
@@ -16,6 +17,30 @@ public class Main_home04 {
     public static void main(String[] args) throws IOException {
         Group group = createGroupQuiet();
         group.addStudent(createNewStudent());
+        testSortingDifferentParameters(group);
+        searchInuctee(group);
+
+    }
+
+    public static void searchInuctee(Group group) {
+        for (Student student: group.getGroup()) {
+            if (student != null){
+                if (student.isInductee()){
+                    System.out.println("\n Attention! Potential recruit: " + student);
+
+                }
+            }
+
+        }
+    }
+
+    public static void testSortingDifferentParameters(Group group) {
+        Arrays.sort(group.getGroup(), Student.nameStudent);
+        System.out.println("\n" + group);
+        Arrays.sort(group.getGroup(),Student.departmentStudent);
+        System.out.println("\n" + group);
+        Arrays.sort(group.getGroup(), Student.courseStudent);
+        System.out.println("\n" + group);
     }
 
     public static Student createNewStudent() throws IOException {
@@ -23,7 +48,7 @@ public class Main_home04 {
                 System.out.println("Please input data about new student: ");
 
                     System.out.println("Input sex(true/false): ");
-                        boolean inputSex = Boolean.valueOf(reader.readLine());
+                         boolean inputSex = Boolean.valueOf(reader.readLine());
                     System.out.println("Input age(int): ");
                         int inputAge = Integer.valueOf(reader.readLine());
                     System.out.println("Input weight(double): ");

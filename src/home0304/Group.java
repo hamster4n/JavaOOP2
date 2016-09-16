@@ -24,6 +24,10 @@ public class Group {
         this.nameGroup = nameGroup;
     }
 
+    public Student[] getGroup() {
+        return group;
+    }
+
     public void addStudent(Student student) {
         try {
             boolean isNullInGroup = false;
@@ -103,7 +107,7 @@ public class Group {
 
     @Override
     public String toString() {
-        Arrays.sort(group, Student.nameStudent);
+//        Arrays.sort(group, Student.nameStudent);
         return  "nameGroup = " + nameGroup + "\n" + Arrays.toString(group);
     }
 }

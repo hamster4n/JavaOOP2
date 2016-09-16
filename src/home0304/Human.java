@@ -65,4 +65,11 @@ public class Human {
         System.out.println("My name is " + name + ". I am a " + (sex == true ? "boy. " : "girl. ") +
                 "My age is " + age + ". My weigth is " + weigth + ". And peoples say, that may grows is " + growth + " sm.");
     }
+
+    @Override
+    public String toString() {
+        return "sex= " + sex + ",   age= " + age + ", weigth= " + weigth + ", growth= " + growth + ", name= " + name;
+    }
+
+
 }

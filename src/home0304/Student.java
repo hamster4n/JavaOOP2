@@ -5,7 +5,7 @@ import java.util.Comparator;
 /**
  * Created by Hamster4n.
  */
-public class Student extends Human {
+public class Student extends Human implements CalledToArmyable {
     private String group;
     private int course;
     private String department;
@@ -51,18 +51,16 @@ public class Student extends Human {
     }
 
     @Override
-    public String toString() {
-        return super.getName() + "\n";
+    public boolean isInductee() {
+        if (super.isSex() && super.getAge() > 17){
+            return true;
+        } else return false;
     }
 
-
-//    @Override
-//    public int compareTo(Student student) {
-//        if (student == null){
-//            return -1;
-//        } else return this.getName().compareTo(student.getName());
-//
-//    }
+    @Override
+    public String toString() {
+        return "\n course= " + course + ", department= " + department + ", " + super.toString();
+    }
 
     public static Comparator<Student> nameStudent = new Comparator<Student>() {
         @Override
@@ -73,6 +71,28 @@ public class Student extends Human {
                 return -1;
             } else return o1.getName().compareTo(o2.getName());
 
+        }
+    };
+
+    public static Comparator<Student> departmentStudent = new Comparator<Student>() {
+        @Override
+        public int compare(Student o1, Student o2) {
+            if (o1 == null){
+                return 1;
+            } else if (o2 == null){
+                return -1;
+            } else return o1.getDepartment().compareTo(o2.getDepartment());
+        }
+    };
+
+    public static Comparator<Student> courseStudent = new Comparator<Student>() {
+        @Override
+        public int compare(Student o1, Student o2) {
+            if (o1 == null){
+                return 1;
+            } else if(o2 == null){
+                return -1;
+            } else return o1.getCourse() - o2.getCourse();
         }
     };
 
