@@ -16,22 +16,24 @@ import java.util.Arrays;
 public class Main_home04 {
     public static void main(String[] args) throws IOException {
         Group group = createGroupQuiet();
-        group.addStudent(createNewStudent());
+        //group.addStudent(createNewStudent());
         testSortingDifferentParameters(group);
-        searchInuctee(group);
+        System.out.println("\n" + searchInuctee(group));
 
     }
 
-    public static void searchInuctee(Group group) {
+    public static Group searchInuctee(Group group) {
+        Group group1 = new Group("Inuctees");
         for (Student student: group.getGroup()) {
             if (student != null){
                 if (student.isInductee()){
-                    System.out.println("\n Attention! Potential recruit: " + student);
+                    group1.addStudent(student);
 
                 }
             }
 
         }
+        return group1;
     }
 
     public static void testSortingDifferentParameters(Group group) {

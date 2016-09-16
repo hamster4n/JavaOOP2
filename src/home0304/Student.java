@@ -52,7 +52,7 @@ public class Student extends Human implements CalledToArmyable {
 
     @Override
     public boolean isInductee() {
-        if (super.isSex() && super.getAge() > 17){
+        if (super.isSex() && super.getAge() > 18){
             return true;
         } else return false;
     }
