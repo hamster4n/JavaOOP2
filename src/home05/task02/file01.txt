@@ -1,0 +1,6 @@
+cat
+milk
+dog
+meat
+bird
+corn

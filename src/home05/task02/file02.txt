@@ -1,0 +1,6 @@
+cat
+mau
+dog
+gav
+bird
+chirik
