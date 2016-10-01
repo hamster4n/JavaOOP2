@@ -17,20 +17,13 @@ public class Main {
 
         File fSource = new File(source);
         File fReceiver = new File(receiver);
-//        if (fSource.isDirectory()){
-//            String[] filenames = fSource.list();
-//            for (String filename: filenames) {
-//                System.out.println(filename);
-//            }
-//        }
+
 
         File[] files = fSource.listFiles();
         for (File file:files) {
             if (checkForExtension(extension, file)){
-                System.out.println(file);
-
                 try {
-                    copy(fSource, fReceiver);
+                    copy(file, new File(fReceiver, file.getName()));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
