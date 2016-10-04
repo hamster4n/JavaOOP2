@@ -1,0 +1,9 @@
+HONORS
+ course= 5, department= Geodesy, sex= true,   age= 25, weigth= 70.3, growth= 178.4, name= Nikola
+ course= 3, department= Accounting, sex= false,   age= 18, weigth= 54.2, growth= 151.8, name= Helga
+ course= 5, department= Geodesy, sex= true,   age= 25, weigth= 75.0, growth= 181.1, name= Tolik
+ course= 3, department= Accounting, sex= false,   age= 18, weigth= 52.0, growth= 149.6, name= Julia
+ course= 5, department= Geodesy, sex= true,   age= 25, weigth= 80.3, growth= 178.0, name= Yaroslav
+ course= 3, department= Accounting, sex= false,   age= 18, weigth= 55.1, growth= 154.1, name= Kat
+ course= 5, department= Geodesy, sex= true,   age= 25, weigth= 90.3, growth= 179.8, name= Konstantin
+ course= 3, department= Accounting, sex= false,   age= 18, weigth= 51.6, growth= 150.5, name= Svetlananullnull
